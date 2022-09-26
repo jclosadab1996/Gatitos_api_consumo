@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/10b9adabac.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>GATITOS APP</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Mukta:wght@400;600&family=Roboto:ital,wght@0,500;1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./responsive.css" media="(min-width: 750px)" />
+  </head>
+  <body>
+    <div id="body-grid">
+      <header>
+        <h1>
+          <i class="fa-solid fa-paw"></i> Cat Image App
+          <i class="fa-solid fa-paw"></i>
+        </h1>
+        <span id="error"></span>
+      </header>
+      <main>
+        <h2><i class="fa-solid fa-dog"></i> Random Cats</h2>
+        <section id="randomCat" class="images-grid">
+          <article class="img-container">
+            <img height="250px" width="250px" src="" alt="" id="img1" />
+            <button id="button1" class="favoriteButton">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          </article>
+          <article class="img-container">
+            <img height="250px" width="250px" src="" alt="" id="img2" />
+            <button id="button2" class="favoriteButton">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          </article>
+          <article class="img-container">
+            <img height="250px" width="250px" src="" alt="" id="img3" />
+            <button id="button3" class="favoriteButton">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          </article>
+          <article class="img-container">
+            <img height="250px" width="250px" src="" alt="" id="img4" />
+            <button id="button4" class="favoriteButton">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          </article>
+          <article class="img-container" id="img-container5">
+            <img height="250px" width="250px" src="" alt="" id="img5" />
+            <button id="button5" class="favoriteButton">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          </article>
+        </section>
+        <button onclick="loadRandomDog()" id="reload-button" class="importanBtn">
+          Reload <i class="fa-solid fa-arrows-rotate"></i>
+        </button>
+<hr>
+
+        <section id="uploadingDog">
+
+          <form id="uploadingForm">
+            <label for="file" id="upload-label">
+              <span>Upload your Cat picture! </span><i class="fa-solid fa-cloud-arrow-up"></i>
+              <input type="file" id="file" name="file" />
+            </label>
+            <button type="button" onclick="uploadDogImage()" class="importanBtn"> Upload your cat images  <i class="fa-solid fa-bone"></i></button>
+          </form>
+        </section>
+
+        <hr>
+
+        <section class="favorite-container">
+          <div class="tittle-favorite">
+            <h2>
+              <i class="fa-solid fa-shield-dog"></i> Favorite Cats
+              <i class="fa-solid fa-shield-dog"></i>
+            </h2>
+            <button id="outFavorite" onclick="UpdateFavoriteDog()" class="importanBtn">
+              Show the favorite </i>
+            </button>
+          </div>
+
+          <section id="favoriteDog" class="images-grid"></section>
+        </section>
+      </main>
+      <footer>
+        <p>Made by Juan</p>
+        <ul class="footer-contact">
+          <li>
+            <a href=""
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href=" "
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./axios.js"></script>
+    <!-- <script src="./fetch.js"></script> -->
+  </body>
+</html>
